@@ -12,7 +12,9 @@
   <h3 text-center>Select your favorite quote</h3>
   <ion-list>
     <button ion-item *ngFor="let quoteGroup of quoteCollection">
-      <ion-icon [name]="quoteGroup.icon"></ion-icon>
+      <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
+      <h2>{{ quoteGroup.category }}</h2>
+      <p>{{ quoteGroup.quotes.length }} quotes</p>
     </button>
   </ion-list>
 </ion-content>
