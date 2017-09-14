@@ -13,7 +13,7 @@
   <ion-list>
     <button ion-item *ngFor="let quoteGroup of quoteCollection">
       <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
-      <h2>{{ quoteGroup.category }}</h2>
+      <h2>{{ quoteGroup.category | uppercase }}</h2>
       <p>{{ quoteGroup.quotes.length }} quotes</p>
     </button>
   </ion-list>
