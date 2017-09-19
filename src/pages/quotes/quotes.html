@@ -8,5 +8,12 @@
 
 
 <ion-content padding>
-
+  <ion-card *ngFor="let quote of quoteGroup.quotes; let i=index">
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ quote.text }}</p>
+      <p>- {{ quote.person }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
