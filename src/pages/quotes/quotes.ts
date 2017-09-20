@@ -23,7 +23,7 @@ export class QuotesPage implements OnInit {
       title: 'Add quote',
       subTitle: 'Are you sure?',
       message: 'Are you sure you want to favorite this quote?',
-      buttons: ['Add to Favorites']
+      buttons: ['Add to Favorites', 'Cancel']
     });
     alert.present();
   }
