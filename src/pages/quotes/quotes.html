@@ -20,8 +20,15 @@
       <ion-col text-center>
         <button ion-button color="danger"
         small round outline
-        (click)="onAddToFavorite(quote)">
+        (click)="onAddToFavorites(quote)"
+        *ngIf="!isFavorite(quote)">
           <ion-icon name="heart"></ion-icon>
+        </button>
+        <button ion-button color="danger"
+                small round outline
+                (click)="onRemoveFromFavorites(quote)"
+                *ngIf="isFavorite(quote)">
+                Unfavorite
         </button>
       </ion-col>
     </ion-row>
