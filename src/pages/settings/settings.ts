@@ -12,10 +12,11 @@ export class SettingsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private settingsService: SettingsService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
-  }
   onToggle(toggle: Toggle) {
     this.settingsService.setBackground(toggle.checked);
+  }
+
+  checkAltBackground(){
+    return this.settingsService.isAltBackground();
   }
 }
